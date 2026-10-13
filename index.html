@@ -23,25 +23,41 @@
 </nav>
 
 <header class="hero" id="top">
-  <div class="wrap hero-grid">
-    <div class="hero-main">
-      <p class="eyebrow">Call for Contributions</p>
-      <h1>1st International Workshop on Immersive Digital Twins <span class="nowrap">(WIDgiT 2027)</span></h1>
-      <p class="sub">When, how, and for whom do immersive technologies extend what a digital twin can do beyond the desktop? Join us to find out and to draft a research agenda for the community.</p>
-      <a class="button" href="#submission">Submit a paper</a>
-      <a class="button ghost" href="#topics">Explore the topics</a>
+  <div class="wrap">
+    <div class="hero-top">
+      <div>
+        <p class="eyebrow">Call for Contributions</p>
+        <h1>1st International Workshop on Immersive Digital Twins <span class="nowrap">(WIDgiT 2027)</span></h1>
+      </div>
+      <div class="hero-side">
+        <p class="sub">When, how, and for whom do immersive technologies extend what a digital twin can do beyond the desktop? Join us to find out and to draft a research agenda for the community.</p>
+        <a class="button" href="#submission">Submit a paper</a>
+        <a class="button ghost" href="#topics">Read the topics</a>
+      </div>
     </div>
-    <aside class="glance" aria-label="Workshop at a glance">
-      <h2>At a glance</h2>
-      <dl>
-        <div><dt>Conference</dt><dd>IEEE VR 2027</dd></div>
-        <div><dt>Location</dt><dd>Melbourne, Australia</dd></div>
-        <div><dt>Workshop</dt><dd>27 or 28 February 2027 (to be confirmed)</dd></div>
-        <div><dt>Format</dt><dd>Half day, with more than half spent in group work</dd></div>
-        <div><dt>Papers</dt><dd>2 to 4 pages, archived in IEEE Xplore</dd></div>
-        <div class="hot"><dt>Submission deadline</dt><dd>7 December 2026</dd></div>
-      </dl>
-    </aside>
+    <ul class="facts">
+      <li>IEEE VR 2027 · Melbourne, Australia</li>
+      <li>27 or 28 February 2027 (to be confirmed)</li>
+      <li>Half-day workshop</li>
+      <li class="hot">Papers due 7 December 2026</li>
+    </ul>
+    <div class="twin" id="twin" role="group" aria-label="Interactive digital twin of a car. Each topic of interest grows out of the twin.">
+      <div class="twin-stage">
+        <canvas tabindex="0" aria-label="Rotatable 3D digital twin of a car. Use the left and right arrow keys to turn it."></canvas>
+        <div class="twin-hud" aria-hidden="true">
+          <div class="hud-title"><span class="live"></span>TWIN STATE · illustrative</div>
+          <div>Speed <b data-k="speed">0</b> km/h</div>
+          <div>Pack temp <b data-k="temp">0</b> °C</div>
+          <div>Tyre FL <b data-k="tyre">0</b> bar</div>
+          <div>Sync lag <b data-k="lag">0</b> ms</div>
+        </div>
+        <div class="twin-labels"></div>
+        <div class="twin-hint" aria-hidden="true">Drag to rotate · select a node</div>
+        <button class="twin-replay" type="button">Replay</button>
+      </div>
+      <div class="twin-tabs" aria-label="Topics of interest"></div>
+      <div class="twin-panel" aria-live="polite"></div>
+    </div>
   </div>
 </header>
 
@@ -51,7 +67,7 @@
   <h2>About the workshop</h2>
   <div class="cols">
     <div>
-      <p>Digital twins (DT) and immersive technologies are often discussed hand-in-hand, with the assumption that DTs are synonymous with immersive visualisation. Much of the core value of a DT, including real-time state reflection, predictive modelling and system control, can be realised through conventional desktop interfaces. This conflation hides a more useful question. When, how, and for whom do immersive technologies genuinely extend the capabilities of a digital twin beyond what desktop approaches can offer?</p>
+      <p>Digital twins (DT) and immersive technologies are often discussed hand-in-hand, with the assumption that DTs are synonymous with immersive visualisation. Much of the core value of a DT, including real-time state reflection, predictive modelling and system control, can be realised through conventional desktop interfaces. The question, then, is what immersion adds. When, how, and for whom do immersive technologies genuinely extend the capabilities of a digital twin beyond what desktop approaches can offer?</p>
       <p><strong>This workshop will establish and promote the area of immersive digital twins</strong>, focusing on where the affordances of immersive technologies can benefit DT applications. These affordances are spatial perception, embodied interaction, co-located and remote collaboration, and situated visualisation. We will articulate them into a research agenda that shows where they create substantive value.</p>
       <p>The workshop combines short paper presentations with structured discussion and ends with a collaborative research agenda-setting session. The organisers will write up the outcomes, and contributing participants will be invited to co-author the resulting agenda paper. We welcome submissions from researchers working across immersive technologies, digital twin systems, human-computer interaction, visualisation, and application domains such as manufacturing, healthcare, infrastructure and defence.</p>
     </div>
@@ -70,25 +86,8 @@
 
 <section class="reveal" id="topics">
   <h2>Topics of interest</h2>
-  <p>We welcome submissions on, but not limited to, the following topics. Rotate the twin and open a node to see what each one covers.</p>
+  <p>We welcome submissions on, but not limited to, the following topics. You can also explore them on the digital twin at the top of the page.</p>
 
-  <div class="twin" id="twin" role="group" aria-label="Interactive digital twin of a car. Each topic of interest grows out of the twin.">
-    <div class="twin-stage">
-      <canvas tabindex="0" aria-label="Rotatable 3D digital twin of a car. Use the left and right arrow keys to turn it."></canvas>
-      <div class="twin-hud" aria-hidden="true">
-        <div class="hud-title"><span class="live"></span>TWIN STATE · illustrative</div>
-        <div>Speed <b data-k="speed">0</b> km/h</div>
-        <div>Pack temp <b data-k="temp">0</b> °C</div>
-        <div>Tyre FL <b data-k="tyre">0</b> bar</div>
-        <div>Sync lag <b data-k="lag">0</b> ms</div>
-      </div>
-      <div class="twin-labels"></div>
-      <div class="twin-hint" aria-hidden="true">Drag to rotate · select a node</div>
-      <button class="twin-replay" type="button">Replay</button>
-    </div>
-    <div class="twin-tabs" aria-label="Topics of interest"></div>
-    <div class="twin-panel" aria-live="polite"></div>
-  </div>
   <div class="grid topic-cards">
     <div class="card" data-short="Affordances">
       <h3>Affordances of immersive technologies for digital twins</h3>
@@ -207,7 +206,6 @@
         <div class="card"><h3>Visualisation</h3><p>How should twins be represented in immersive space? This covers level of detail, abstraction, non-physical twins, and links to audio, haptics and data physicalisation.</p></div>
         <div class="card"><h3>Key affordances</h3><p>Which affordances of immersive technology have a strong evidence base in DT contexts, which are only assumed, and what research would test those claims?</p></div>
       </div>
-      <p class="small">Before the workshop, the organisers map accepted papers onto the four themes and prepare a starting framework and prompts for each group. During the workshop, each group records its questions, evidence and gaps on a shared template. After the workshop, the shared board stays open for a few weeks of further input. The organisers then write up the outcomes and invite contributing participants to co-author the agenda paper.</p>
     </div>
   </div>
 </section>
@@ -226,21 +224,13 @@
         <li>James Walsh</li>
       </ul>
     </div>
-    <div>
-      <h2>Program committee</h2>
-      <p><strong>Confirmed.</strong> All organisers, plus Adam Drogemuller (Flinders University).</p>
-      <p><strong>Invited.</strong> Emmanuel Dubois (Université de Toulouse), Arnaud Prouzeau (Inria Saclay), Falk Schreiber (University of Konstanz), Dieter Schmalstieg (University of Stuttgart), Thuong Hoang (Deakin University), Sarita Adve (University of Illinois), Valérie Gouranton (INSA de Rennes), Jean-Yves Didier (Université d'Évry Paris-Saclay), David Baudry (CESI LINEACT Rouen) and Romain Pinquié (Université Grenoble Alpes).</p>
-    </div>
-  </div>
-</section>
-
-<section class="reveal" id="contact">
-  <div class="contact-bar">
-    <div>
+    <div id="contact">
       <h2>Contact</h2>
-      <p>Questions about the workshop can go to the primary contact, Andrew Cunningham.</p>
+      <div class="contact-card">
+        <p>Questions about the workshop can go to the primary contact, Andrew Cunningham.</p>
+        <a class="button" href="mailto:andrew.cunningham@adelaide.edu.au">andrew.cunningham@adelaide.edu.au</a>
+      </div>
     </div>
-    <a class="button" href="mailto:andrew.cunningham@adelaide.edu.au">andrew.cunningham@adelaide.edu.au</a>
   </div>
 </section>
 

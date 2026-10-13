@@ -294,10 +294,9 @@ footer {
 .twin-panel ul { margin-bottom: 0; }
 .twin-empty { color: var(--muted); margin: 0; }
 
-/* Without JavaScript the plain topic cards show. With it, the twin replaces them. */
+/* Without JavaScript the twin stays hidden and the topic cards carry the content. */
 .twin { display: none; }
 .js .twin { display: block; }
-.js .topic-cards { display: none; }
 
 @media (max-width: 600px) {
   .twin-node .t { display: none; }
@@ -379,3 +378,52 @@ h3.first { margin-top: 0; }
   .sticky { position: static; }
   .glance dl > div { grid-template-columns: 110px 1fr; }
 }
+
+/* Hero with the twin built in */
+.hero {
+  background:
+    radial-gradient(ellipse at 15% 0%, rgba(168, 65, 111, 0.38) 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 100%, rgba(80, 60, 180, 0.25) 0%, transparent 55%),
+    #0b0b16;
+  color: #ececf0;
+  border-bottom: none;
+  padding: 52px 0 36px;
+}
+.hero .eyebrow { color: #ff8cb9; }
+.hero h1 { color: #fff; font-size: clamp(28px, 4.2vw, 44px); margin: 0; }
+.hero-top { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: end; }
+.hero .sub { color: #b9b9d0; max-width: none; margin: 0 0 20px; }
+.hero .button { background: #ff8cb9; color: #2a0f1d; }
+.hero .button.ghost { background: transparent; color: #ffd0e2; border: 1px solid rgba(255, 140, 185, 0.6); }
+.hero .facts { margin: 26px 0 6px; }
+.hero .facts li { background: rgba(255, 255, 255, 0.08); color: #ececf0; }
+.hero .facts li.hot { background: #a8416f; color: #fff; font-weight: 600; }
+.hero .twin { margin: 0; }
+.hero .twin-stage {
+  background: transparent; border: none; box-shadow: none; border-radius: 0;
+  height: clamp(420px, 56vw, 600px);
+}
+.hero .twin-tab { background: rgba(255, 255, 255, 0.06); color: #e8e8f2; border-color: #3a3150; }
+.hero .twin-tab:hover { border-color: #ff8cb9; }
+.hero .twin-tab.active { background: #a8416f; border-color: #a8416f; color: #fff; }
+.hero .twin-panel { background: rgba(255, 255, 255, 0.05); border-color: #3a3150; color: #ececf0; }
+.hero .twin-panel h3 { color: #ff8cb9; }
+.hero .twin-empty { color: #9a9ab5; }
+
+.contact-card { background: var(--accent-soft); border-radius: 14px; padding: 22px 24px; }
+.contact-card p { margin: 0 0 16px; }
+.contact-card .button { margin: 0; word-break: break-all; }
+
+@media (max-width: 860px) {
+  .hero-top { grid-template-columns: 1fr; gap: 20px; }
+}
+
+/* Tighter hero so the car shows on the first screen */
+.hero { padding: 30px 0 28px; }
+.hero h1 { font-size: clamp(26px, 3.6vw, 40px); }
+.hero-top { grid-template-columns: 1.45fr 1fr; gap: 36px; }
+.hero .sub { font-size: 17px; margin-bottom: 14px; }
+.hero .button { padding: 9px 18px; }
+.hero .facts { margin: 18px 0 0; gap: 8px; }
+.hero .facts li { font-size: 13px; padding: 4px 12px; }
+.hero .twin-stage { height: clamp(400px, 50vw, 560px); margin-top: -8px; }
